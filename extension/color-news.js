@@ -26,12 +26,12 @@ popularity = points <= max ? points / max : 1;
 //Subtext row
 $(this).parent().children('td:first')
     //.css('background', 'rgba('+color+','+popularity/2+')')
-    .css('border-left', 'solid 5px rgba(255,0,0,' + popularity + ')');
+    .css('border-left', 'solid 5px rgba(255,102,0,' + popularity + ')');
 
 //Title row
 $(this).parent().prev().children('td:first')
     //.css('background', 'rgba('+color+','+popularity/2+')')
-    .css('border-left', 'solid 5px rgba(255,0,0,' + popularity + ')');
+    .css('border-left', 'solid 5px rgba(255,102,0,' + popularity + ')');
 
 });
 
