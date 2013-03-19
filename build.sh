@@ -1,3 +1,8 @@
+echo "Building lean Zepto"
+# See details of modules here: https://github.com/madrobby/zepto
+MODULES="zepto detect ajax" ./lib/zepto/make dist
+cp lib/zepto/dist/zepto.min.js extension/zepto.min.js
+
 echo "Cleaning filesystem..."
 rm -f extension/.DS_Store
 rm -f extension/*~

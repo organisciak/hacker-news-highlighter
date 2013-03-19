@@ -15,22 +15,26 @@ $('table').css('border-collapse', 'collapse');
 
 $('.subtext').each(function() {
 var points = $(this).children('span').text(),
-    color = '255,219,31',
     popularity;
 
 if (points === null) return;
 
 points = points.split(' ')[0];
 popularity = points <= max ? points / max : 1;
+//Add padding
+$(this).css('padding-bottom', '2px');
+$(this).parent().prev().children('td').css('padding-top', '2px');
 
+//Minimize buffer row
+$(this).parent().next().css('height', 1);
+
+console.log(points);
 //Subtext row
-$(this).parent().children('td:first')
-    //.css('background', 'rgba('+color+','+popularity/2+')')
+$(this).parent().children('td').first()
     .css('border-left', 'solid 5px rgba(255,102,0,' + popularity + ')');
 
 //Title row
-$(this).parent().prev().children('td:first')
-    //.css('background', 'rgba('+color+','+popularity/2+')')
+$(this).parent().prev().children('td').first()
     .css('border-left', 'solid 5px rgba(255,102,0,' + popularity + ')');
 
 });
